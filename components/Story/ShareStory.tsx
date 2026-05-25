@@ -102,7 +102,7 @@ const ShareStory = () => {
                             name="vibe"
                             options={vibeOptions}
                             value={{ value: formData.vibe, label: formData.vibe.charAt(0).toUpperCase() + formData.vibe.slice(1) }}
-                            onChange={(selected) => setFormData({ ...formData, vibe: selected?.value || "neutral" })}
+                            onChange={(selected: any) => setFormData({ ...formData, vibe: selected?.value || "neutral" })}
                             isSearchable={false}
                         />
                     </div>
@@ -115,7 +115,7 @@ const ShareStory = () => {
                         <Select
                             options={collegeOptions}
                             value={collegeOptions.find((opt) => opt.value === formData.collegeName)}
-                            onChange={(selected) => setFormData({ ...formData, collegeName: selected?.value || "" })}
+                            onChange={(selected:any) => setFormData({ ...formData, collegeName: selected?.value || "" })}
                             placeholder="Select a college..."
                             isSearchable
                         />
@@ -165,7 +165,7 @@ const ShareStory = () => {
                                 value: formData.userType,
                                 label: formData.userType.split(" ").map((w) => w[0].toUpperCase() + w.slice(1)).join(" "),
                             }}
-                            onChange={(selected) => setFormData({ ...formData, userType: selected?.value || "student" })}
+                            onChange={(selected:any) => setFormData({ ...formData, userType: selected?.value || "student" })}
                             isSearchable
                         />
                     </div>
